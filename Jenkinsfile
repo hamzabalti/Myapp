@@ -12,13 +12,7 @@ pipeline {
             }
         }
  
-         stage('INSTALL npm') {
-             steps{
-                script{
-                    sh "npm install"
-                }
-            }
-        }
+      
         
          stage('Build') {
              steps{
