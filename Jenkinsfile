@@ -12,14 +12,6 @@ pipeline {
             }
         }
         
-        stage('Install NPM') {
-             steps{
-                script{
-                    sh "npm install"
-                }
-            }
-        }
-        
          stage('export OSSL') {
              steps{
                 script{
