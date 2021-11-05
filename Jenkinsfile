@@ -11,18 +11,11 @@ pipeline {
                 }
             }
         }
-        
-         stage('export OSSL') {
+ 
+         stage('INSTALL npm') {
              steps{
                 script{
-                    sh "export NODE_OPTIONS=--openssl-legacy-provider"
-                }
-            }
-        }
-         stage('INSTALL DEVKIT') {
-             steps{
-                script{
-                    sh "npm install --save-dev @angular-devkit/build-angular"
+                    sh "npm install"
                 }
             }
         }
