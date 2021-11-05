@@ -31,6 +31,7 @@ pipeline {
          stage('Build') {
              steps{
                 script{
+                    sh "export NODE_OPTIONS=--openssl-legacy-provider"
                     sh " ansible-playbook Ansible/build.yml -i Ansible/inventory/host.yml"
                 }
             }
