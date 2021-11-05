@@ -3,8 +3,8 @@
 - name: create image docker
   docker_image:
     name: devops
-    build: .
-     path: /var/lib/jenkins/workspace/pipline_CI
+    build:
+     path: /var/lib/jenkins/workspace/devops
      pull: no
     source: build
     state: present
