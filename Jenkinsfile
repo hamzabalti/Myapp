@@ -20,6 +20,14 @@ pipeline {
             }
         }
         
+         stage('export OSSL') {
+             steps{
+                script{
+                    sh "export NODE_OPTIONS=--openssl-legacy-provider"
+                }
+            }
+        }
+        
          stage('Build') {
              steps{
                 script{
