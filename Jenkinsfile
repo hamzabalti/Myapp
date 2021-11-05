@@ -14,7 +14,7 @@ pipeline {
  
       
 
-            stage('install') {
+         /*   stage('install') {
              steps{
                 script{
                     sh " npm install --save-dev @angular-devkit/build-angular"
@@ -27,7 +27,18 @@ pipeline {
                     sh " ansible-playbook Ansible/build.yml -i Ansible/inventory/host.yml"
                 }
             }
+        }*/
+        
+        stage('docker') {
+             steps{
+                script{
+                    sh "ansible-playbook Ansible/docker.yml -i Ansible/inventory/host.yml "
+                }
+            }
         }
+        
+        
+        
         
         }
         }
