@@ -19,6 +19,13 @@ pipeline {
                 }
             }
         }
+         stage('INSTALL DEVKIT') {
+             steps{
+                script{
+                    sh "npm install --save-dev @angular-devkit/build-angular"
+                }
+            }
+        }
         
          stage('Build') {
              steps{
