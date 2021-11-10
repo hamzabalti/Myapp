@@ -15,7 +15,7 @@
     
 - name: Tag and push to docker hub
   community.docker.docker_image:
-     name: devops:7.56
-     repository: hamzabalti/devops:7.56
+     name: devops:latest
+     repository: hamzabalti/devops:1.2
      push: yes
      source: local
