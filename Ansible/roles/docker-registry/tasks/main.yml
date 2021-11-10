@@ -5,10 +5,17 @@
     username: hamzabalti
     password: hamzabalti
     
+#- name: Tag and push to docker hub
+#  docker_image:
+#    name: devops
+#    repository: hamzabalti/devops
+#    tag: 7.0
+#    push: yes
+#    source: local
+    
 - name: Tag and push to docker hub
-  docker_image:
-    name: devops
-    repository: hamzabalti/devops
-    tag: 7.0
-    push: yes
-    source: local
+  community.docker.docker_image:
+     name: devops:7.56
+     repository: hamzabalti/devops:7.56
+     push: yes
+     source: local
