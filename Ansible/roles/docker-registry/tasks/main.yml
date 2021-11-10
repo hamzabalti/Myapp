@@ -11,3 +11,4 @@
     repository: hamzabalti/devops
     tag: 7.0
     push: yes
+    source: local
